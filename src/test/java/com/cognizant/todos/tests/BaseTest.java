@@ -9,6 +9,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import com.cognizant.todos.pages.HomePage;
+import com.cognizant.todos.utilities.ElementUtil;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -22,7 +23,9 @@ public class BaseTest {
 	public void beforeTest() {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		ElementUtil.implicitlyWait(driver, 10);
+		driver.manage().deleteAllCookies();
+		driver.manage().window().maximize();
 		homePage = PageFactory.initElements(driver, HomePage.class);
 	}
 	
