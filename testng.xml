@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="MarsAir test Suite" verbose="1" thread-count="5">
+	
+	<test name="com-cognizant-tests" parallel="false">
+		<packages>
+			<package name="com.cognizant.todos.tests.*"></package>
+		</packages>
+	</test>
+</suite>
