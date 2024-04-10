@@ -1,7 +1,5 @@
 package com.cognizant.todos.tests;
 
-import java.time.Duration;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -36,7 +34,7 @@ public class BaseTest {
 	
 	@AfterMethod
 	public void afterTest() {
-		driver.quit();
+		//driver.quit();
 	}
 	
 	
